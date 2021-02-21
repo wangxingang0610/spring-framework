@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--注入方式1： 构造-->
+    <bean id="accountService1" class="com.spring.service.AccountServiceImpl1">
+        <constructor-arg name="name" value="aa"></constructor-arg>
+        <constructor-arg name="age" value="10"></constructor-arg>
+        <constructor-arg name="birthday" ref="now"></constructor-arg>
+    </bean>
+    <bean id="now" class="java.util.Date"></bean>
+
+
+    <!--注入方式2： set-->
+    <bean id="accountService2" class="com.spring.service.AccountServiceImpl2">
+        <property name="name" value="bb"></property>
+        <property name="age" value="222"></property>
+        <property name="birthday" ref="now"></property>
+    </bean>
+
+
+    <bean id="accountService3" class="com.spring.service.AccountServiceImpl3">
+        <property name="myStrs">
+            <list>
+                <value>111</value>
+                <value>111</value>
+                <value>111</value>
+            </list>
+        </property>
+
+
+        <property name="myList">
+            <set>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </set>
+        </property>
+
+        <property name="mySet">
+            <array>
+                <value>aaa1111</value>
+                <value>bbb111</value>
+                <value>ccc111</value>
+            </array>
+        </property>
+
+        <property name="myMap">
+            <map>
+                <entry key="zhangsan" value="张三"></entry>
+                <entry key="liJiang">
+                    <value>李江</value>
+                </entry>
+            </map>
+        </property>
+        <property name="myProps">
+            <props>
+                <prop key="k1">k1</prop>
+                <prop key="k2">k2</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

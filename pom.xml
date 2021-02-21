@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>spring-framework</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spring_day1_01_jdbc</module>
+        <module>spring_day1_02_unfactory</module>
+        <module>spring_day1_03_factory</module>
+        <module>spring_day1_04_spring-XML</module>
+        <module>spring_day1_05_bean</module>
+        <module>spring_day1_06_DI</module>
+        <module>spring_day2_01_annotition_ioc</module>
+        <module>spring_day2_02_xml_ioc</module>
+        <module>spring_day2_03_account_annatition_ioc</module>
+        <module>spring_day2_04_annotation_withoutXml</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+</project>

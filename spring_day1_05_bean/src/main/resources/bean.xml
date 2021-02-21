@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--创建bean 方式1使用默认构造 -->
+    <!--
+    <bean id="accountService" class="spring.service.AccountServiceImpl">
+            <property name="accountDao" ref="accoutDao"></property>
+        </bean>
+
+        <bean id="accoutDao" class="spring.dao.AccountDaoImpl"></bean>
+        -->
+
+    <!--创建bean 方式2使用普通工厂中的方法创建对象 -->
+<!--    <bean id="instanceFactory" class="spring.factory.InstanceFactory"></bean>
+    <bean id="accountService" factory-bean="instanceFactory" factory-method="getAccountService" ></bean>-->
+
+    <!--创建bean 方式3使用工厂中的静态方法创建对象 -->
+    <bean id="accountService" class="spring.factory.StaticFactory" factory-method="getAccountService"></bean>
+
+</beans>
